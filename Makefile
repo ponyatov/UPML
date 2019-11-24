@@ -5,7 +5,7 @@ MODULE = $(notdir $(CWD))
 PY  = $(CWD)/bin/python3
 PIP = $(CWD)/bin/pip3
 
-run: $(PY) $(MODULE).py
+run: $(PY) $(MODULE).py $(MODULE).ini
 	$^
 
 doc: doc/wambook.pdf
