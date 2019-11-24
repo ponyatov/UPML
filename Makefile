@@ -5,8 +5,9 @@ MODULE = $(notdir $(CWD))
 PY  = $(CWD)/bin/python3
 PIP = $(CWD)/bin/pip3
 
-run: $(PY) $(MODULE).py $(MODULE).ini
-	$^
+run:
+	@echo . bin/activate
+	@echo juputer notebook UPML.ipynb
 
 doc: doc/wambook.pdf
 doc/wambook.pdf:

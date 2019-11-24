@@ -1,16 +1,5 @@
 
 
-    def __getitem__(self,key):
-        return self.slot[key]
-    def __setitem__(self,key,that):
-        if callable(that): self[key] = Cmd(that) ; return self
-        self.slot[key] = that ; return self
-    def __lshift__(self,that):
-        self[that.type] = that ; return self
-    def __floordiv__(self,that):
-        if isinstance(that,str): return self // String(that)
-        self.nest.append(that) ; return self
-
     def pop(self): return self.nest.pop(-1)
     def top(self): return self.nest[-1]
 
